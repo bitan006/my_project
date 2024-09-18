@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Function to load the navbar into the page
+        function loadNavbar() {
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+                });
+        }
+        window.onload = loadNavbar; // Load the navbar when the page loads
+    </script>
+</head>
+<body>
+    <div id="navbar"></div> <!-- Placeholder for the navbar -->
+    <div class="main-container">
+        <!-- Welcome Section with Registration Message -->
+        <div class="welcome-message">
+            <h1>Welcome to Votadhikar</h1>
+            <p>Are you new to Votadhikar? Register today to exercise your voting rights.</p>
+            <a href="registration.html" class="register-btn">Register Here</a> <!-- Registration Button -->
+        </div>
+
+        <div class="voting-image">
+            <img src="vote-ballot-box-people-putting-pepper-vote-into-the-box-election-concept-democracy-freedom-of-speech-justice-voting-and-opinion-referendum-and-poll-choice-event-illustration-vector.jpg" alt="Voting Illustration">
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Voting Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
