@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Page</title>
+    <link rel="stylesheet" href="collageelection.css">
+    <script>
+        // Function to load the navbar into the page
+        function loadNavbar() {
+            fetch('usernavbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+                });
+        }
+        window.onload = loadNavbar; // Load the navbar when the page loads
+    </script>
+</head>
+<body>
+    <div id="navbar"></div> <!-- Placeholder for the navbar -->
+
+    
+    <main>
+        <div class="container">
+            <h1>Election</h1>
+            
+            <div class="election-info">
+                <p><strong>Election-Id: </strong>1001</p>
+                <p><strong>Election-Date: </strong>2024/11/09</p>
+                <p><strong>Election-Time: </strong>8AM-9PM</p>
+            </div>
+
+            <h2>Candidates</h2>
+            <div class="candidates">
+                <div class="candidate">
+                    <img src="male1.png" alt="Candidate Photo">
+                    <p><strong>Name: </strong>Satyam Das</p>
+                    <p><strong>Age: </strong>21</p>
+                    <p><strong>Qualification: </strong>Graduate in BCom</p>
+                </div>
+
+                <div class="candidate">
+                    <img src="female.png" alt="Candidate Photo">
+                    <p><strong>Name: </strong>Trishna Chakrborti</p>
+                    <p><strong>Age: </strong>22</p>
+                    <p><strong>Qualification: </strong>Graduate</p>
+                </div>
+
+                <div class="candidate">
+                    <img src="male2.png" alt="Candidate Photo">
+                    <p><strong>Name: </strong>Soumyadeep Manna</p>
+                    <p><strong>Age: </strong>23</p>
+                    <p><strong>Qualification: </strong>Graduate</p>
+                </div>
+
+                <div class="candidate">
+                    <img src="male3.png" alt="Candidate Photo">
+                    <p><strong>Name: </strong>Abantika Das</p>
+                    <p><strong>Age: </strong>22</p>
+                    <p><strong>Qualification: </strong>Graduate</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

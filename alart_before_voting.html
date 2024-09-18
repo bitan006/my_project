@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Voting - Votadhikaar</title>
+    <link rel="stylesheet" href="alart_before_voting-style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="confirmation-box">
+            <h1>Are you sure you want to vote?</h1>
+            <p>You have only <strong>3 voting attempts</strong> left. Once you cast your vote, you won't be able to change it.</p>
+            <p>Please make sure you have selected the right candidate.</p>
+            <button id="proceedBtn" class="proceed-btn">Proceed to Vote</button>
+            <button id="cancelBtn" class="cancel-btn">Cancel</button>
+        </div>
+    </div>
+
+    <script>
+        // Redirect to the voting page when "Proceed to Vote" button is clicked
+        document.getElementById('proceedBtn').addEventListener('click', function() {
+            window.location.href = 'online_voting.html';  // Update with actual voting page link
+        });
+
+        // Add functionality for canceling (can redirect or close modal, depending on your flow)
+        document.getElementById('cancelBtn').addEventListener('click', function() {
+            window.history.back();  // Go back to the previous page
+        });
+    </script>
+</body>
+</html>

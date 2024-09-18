@@ -1,0 +1,117 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+/* Main Container Styling */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: linear-gradient(to right, #ffffff 50%, #ffffff 50%);
+    flex-grow: 1;
+    flex-wrap: wrap; 
+}
+
+/* Welcome Message Styling */
+.welcome-message {
+    width: 50%;
+}
+
+/* Heading Styling */
+.welcome-message h1 {
+    font-size: 36px;
+    color: #009688;
+}
+
+/* Paragraph Styling */
+.welcome-message p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Register Button Styling */
+.register-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #009688;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Register Button Hover Effect */
+.register-btn:hover {
+    background-color: #00796b;
+}
+
+/* Voting Image Styling */
+.voting-image {
+    flex: 1; /* Allows the image to take remaining space */
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    max-width: 700px; /* Limits the maximum width */
+}
+
+.voting-image img {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    max-width: 100%; /* Prevents image from overflowing */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #009688;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    /* Voting Image Adjustment */
+    .voting-image {
+        width: 100%; /* Full width on small screens */
+        margin-top: 20px;
+        max-width: none; /* Remove max-width restriction */
+    }
+
+    /* Navbar Styling (to be customized as per your navbar structure) */
+    #navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        background-color: #ffffff;
+        z-index: 1000; /* Ensures the navbar stays on top */
+    }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votadhikaar - Cast Your Vote</title>
+    <link rel="stylesheet" href="online_voting-style.css">
+</head>
+<body>
+    <header>
+        <h1>Cast Your Vote - Votadhikaar</h1>
+        <p>Your vote matters! Choose your candidate wisely.</p>
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+        <div id="countdown">Time left to vote: <span id="timer"></span></div>
+    </header>
+    
+    <main>
+        <form id="voteForm">
+            <section class="candidates">
+                <h2>Select Your Candidate</h2>
+                <div class="candidate-list">
+                    <!-- Candidate 1 -->
+                    <label class="candidate" for="candidate1">
+                        <img src="candidate1.jpg" alt="Candidate 1">
+                        <h3>Shubhrajyoti Ghosh</h3>
+                        <p>Party: Vision Forward</p>
+                        <input type="radio" name="candidate" value="Shubhrajyoti Ghosh" id="candidate1">
+                        <span>Select</span>
+                    </label>
+                    <!-- Candidate 2 -->
+                    <label class="candidate" for="candidate2">
+                        <img src="candidate2.jpg" alt="Candidate 2">
+                        <h3>kingkor Bhoumik</h3>
+                        <p>Party: Unity Movement</p>
+                        <input type="radio" name="candidate" value="kingkor Bhoumik" id="candidate2">
+                        <span>Select</span>
+                    </label>
+                    <!-- Candidate 3 -->
+                    <label class="candidate" for="candidate3">
+                        <img src="candidate3.jpg" alt="Candidate 3">
+                        <h3>Lima Sarkar</h3>
+                        <p>Party: People First</p>
+                        <input type="radio" name="candidate" value="Lima Sarkar" id="candidate3">
+                        <span>Select</span>
+                    </label>
+                    <!-- Candidate 4 -->
+                    <label class="candidate" for="candidate4">
+                        <img src="candidate4.jpg" alt="Candidate 4">
+                        <h3>Priyanka Mondal</h3>
+                        <p>Party: Future Vision</p>
+                        <input type="radio" name="candidate" value="Priyanka Mondale" id="candidate4">
+                        <span>Select</span>
+                    </label>
+                </div>
+                <button type="button" onclick="confirmVote()">Vote</button>
+            </section>
+        </form>
+        
+        <!-- Confirmation Dialog -->
+        <div id="confirmationDialog" style="display: none;">
+            <p id="confirmText"></p>
+            <button onclick="submitVote()">Confirm Vote</button>
+            <button onclick="cancelVote()">Cancel</button>
+        </div>
+    </main>
+
+    <script>
+        function confirmVote() {
+            const selectedCandidate = document.querySelector('input[name="candidate"]:checked').value;
+            document.getElementById("confirmText").innerHTML = `You have selected: ${selectedCandidate}. Confirm your vote?`;
+            document.getElementById("confirmationDialog").style.display = "block";
+        }
+
+        function submitVote() {
+    alert("Your vote has been successfully submitted!");
+    document.getElementById("voteForm").reset();
+    document.getElementById("confirmationDialog").style.display = "none";
+    window.open('userhomepages.html', '_blank'); // Open new window for user homepage
+}
+
+
+        function cancelVote() {
+            document.getElementById("confirmationDialog").style.display = "none";
+        }
+
+        // Countdown Timer Script
+        var countDownTime = 3 * 60; // 3 minutes in seconds
+        var initialTime = countDownTime;
+        var x = setInterval(function() {
+            var minutes = Math.floor(countDownTime / 60);
+            var seconds = countDownTime % 60;
+            document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s ";
+            
+            // Update Progress Bar
+            var progressPercentage = ((initialTime - countDownTime) / initialTime) * 100;
+            document.getElementById("progress-bar").style.width = progressPercentage + "%";
+            
+            countDownTime--;
+            if (countDownTime < 0) {
+                clearInterval(x);
+                document.getElementById("timer").innerHTML = "VOTING CLOSED";
+                document.getElementById("progress-bar").style.width = "100%";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

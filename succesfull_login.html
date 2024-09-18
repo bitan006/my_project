@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Success</title>
+    <link rel="stylesheet" href="succesfully_login_style.css">
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-message">
+            <h1>Registration Successful!</h1>
+            <p>You have successfully registered in our system. Welcome aboard!</p>
+            <button onclick="redirectToLogin()">Go to Login</button>
+        </div>
+    </div>
+
+    <script>
+        function redirectToLogin() {
+            window.location.href = "login.html"; // Redirect to the login page
+        }
+    </script>
+</body>
+</html>

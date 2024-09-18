@@ -1,0 +1,53 @@
+/* Container for the success message */
+.success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f0f0f0; /* Light gray background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Success message styling */
+.success-message {
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 40px 60px; /* Spacious padding */
+    text-align: center; /* Center align text */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 400px; /* Restrict the maximum width */
+    margin: 20px;
+}
+
+/* Success heading */
+.success-message h1 {
+    color: #28a745; /* Green color for success */
+    font-size: 28px; /* Larger heading font */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Success paragraph */
+.success-message p {
+    color: #555; /* Gray text */
+    font-size: 16px; /* Normal text size */
+    margin-bottom: 30px;
+}
+
+/* Login button styling */
+.success-message button {
+    background-color: #007bff; /* Blue background for the button */
+    color: white; /* White text color */
+    border: none;
+    padding: 12px 24px; /* Padding to make the button larger */
+    font-size: 16px; /* Button text size */
+    font-weight: bold; /* Bold text */
+    border-radius: 8px; /* Rounded button corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.success-message button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

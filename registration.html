@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Registration</title>
+    <link rel="stylesheet" href="regstyle.css.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Registration</h2>
+        <form action="registration_otp.html">
+            <div class="form-row">
+                
+                <div class="form-group">
+                    <label for="prefix">I am</label>
+                    <select id="prefix" name="prefix" required>
+                        <option value="Mr">genaral voter</option>
+                        <option value="Ms">nominee</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="cell_phone">Phone Number</label>
+                    <input type="tel" id="cell_phone" name="cell_phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="first_name">Name</label>
+                    <input type="text" id="first_name" name="first_name" placeholder="Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="work_phone">Alternate Phone Number</label>
+                    <input type="tel" id="work_phone" name="work_phone">
+                </div>
+                
+                
+
+                <!-- Missing div closing tag issue fixed -->
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="sample@example.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="alt_email">Alternate Email</label>
+                    <input type="email" id="alt_email" name="alt_email" placeholder="alternate@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="aadhaar">Aadhar Card Number</label>
+                    <input type="text" id="aadhaar" name="aadhaar" maxlength="12" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Create a Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="voter_id">Voter Card Number</label>
+                    <input type="text" id="voter_id" name="voter_id" maxlength="10" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm_password">Confirm Password</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                </div>
+
+                <!-- Captcha Image and Refresh -->
+                <div class="form-group captcha-group">
+                    <label for="captcha">Captcha</label>
+                    <div class="captcha-container">
+                        <img src="captcha-placeholder.png" alt="Captcha" class="captcha-image">
+                        <button type="button" onclick="refreshCaptcha()" class="refresh-btn">Refresh</button>
+                    </div>
+                    <input type="text" id="captcha" name="captcha" placeholder="Enter Captcha" required>
+                </div>
+                
+                <!-- "Above All Are Correct" aligned in one line -->
+                <div class="form-group correct-info">
+                    <label>Above all are correct:</label>
+                    <input type="radio" id="yes" name="correct_info" value="yes" required>
+                    <label for="yes">Yes</label>
+                    
+                </div>
+
+                <div class="form-group terms-group">
+                    <label for="terms">
+                        <input type="checkbox" id="terms" name="terms" required> I agree to the <a href="#">Terms and Conditions</a>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Modified Submit Button placed in its own row -->
+            <div class="form-row">
+                <button type="submit" class="submit-btn">Register Now</button>
+            </div>
+        </form>
+        
+
+    </div>
+
+
+    <script>
+        function refreshCaptcha() {
+            alert('Captcha refreshed!');
+        }
+    </script>
+</body>
+</html>
+

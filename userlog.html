@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election</title>
+    <link rel="stylesheet" href="userlog.css">
+    <script>
+        // Function to load the navbar into the page
+        function loadNavbar() {
+            fetch('usernavbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+                });
+        }
+        window.onload = loadNavbar; // Load the navbar when the page loads
+    </script>
+</head>
+<body>
+    <div id="navbar"></div> <!-- Placeholder for the navbar -->
+
+    <div class="container">
+        <h1>Election</h1>
+        <div class="search-section">
+            <select id="electionType">
+                <option value="mgm-board"> Collage election</option>
+                <option value="techno-board">Office election</option>
+            </select>
+            <button class="search-btn" onclick="redirectToPage()">
+                <i class="search-icon">Search</i>
+            </button>
+        </div>
+    </div>
+    
+    <script>
+        function redirectToPage() {
+            var electionType = document.getElementById("electionType").value;
+    
+            // Define a mapping between the values and the corresponding HTML file
+            var pages = {
+                "mgm-board": "collageelection.html",
+                "techno-board": "officeelection.html",
+            };
+    
+            // Redirect to the selected page
+            window.location.href = pages[electionType];
+        }
+    </script>
+    
+</body>
+</html>

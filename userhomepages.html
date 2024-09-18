@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votadhikaar - Online Voting</title>
+    <link rel="stylesheet" href="userhomepages.css">
+    <script>
+        // Function to load the navbar into the page
+        function loadNavbar() {
+            fetch('usernavbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+                });
+        }
+        window.onload = loadNavbar; // Load the navbar when the page loads
+    </script>
+</head>
+<body>
+    <div id="navbar"></div> <!-- Placeholder for the navbar -->
+    <main>
+        <section class="welcome-section">
+            <h1>Welcome, Mr. Bitan Ghosh</h1>
+            <p>Participate in our secure and transparent online voting system, <strong>Votadhikaar</strong>. Make your vote count and contribute to fair decision-making.</p>
+            <p>Click the button below to cast your vote or view the upcoming election schedules and past election results.</p>
+            <a href="alart_before_voting.html" class="election-btn">Cast Your Vote</a>
+            <a href="userlog.html" class="info-btn">Election Info</a>
+        </section>
+        <section class="upcoming-elections">
+            <h2>Upcoming Elections</h2>
+            <ul>
+                <li>Election for Community Leader - November 10, 2024</li>
+                <li>Annual Budget Approval - December 5, 2024</li>
+            </ul>
+        </section>
+        
+        <section class="features-section">
+            <h2>Why Vote with Votadhikaar?</h2>
+            <div class="features">
+                <div class="feature">
+                    <img src="secure.png" alt="Secure">
+                    <h3>Secure</h3>
+                    <p>State-of-the-art encryption to ensure your vote is safe and confidential.</p>
+                </div>
+                <div class="feature">
+                    <img src="accessible.png" alt="Accessible">
+                    <h3>Accessible</h3>
+                    <p>Vote from anywhere, using any device with internet access.</p>
+                </div>
+                <div class="feature">
+                    <img src="transparent.png" alt="Transparent">
+                    <h3>Transparent</h3>
+                    <p>Results are processed in a transparent manner, with real-time updates.</p>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+</body>
+</html>
